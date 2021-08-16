@@ -9,9 +9,9 @@ namespace Catalog.Repositories
     {
         private readonly List<Item> Items = new()
         {
-            new Item{ Id = new Guid(), Name = "Potion", Price = 9, CreatedDate = DateTimeOffset.UtcNow},
-            new Item{ Id = new Guid(), Name = "Wooden Sword", Price = 15, CreatedDate = DateTimeOffset.UtcNow},
-            new Item{ Id = new Guid(), Name = "Wooden Shield", Price = 19, CreatedDate = DateTimeOffset.UtcNow}
+            new Item{ Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = DateTimeOffset.UtcNow},
+            new Item{ Id = Guid.NewGuid(), Name = "Wooden Sword", Price = 15, CreatedDate = DateTimeOffset.UtcNow},
+            new Item{ Id = Guid.NewGuid(), Name = "Wooden Shield", Price = 19, CreatedDate = DateTimeOffset.UtcNow}
         };
 
         public IEnumerable<Item> GetItems()
