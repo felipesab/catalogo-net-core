@@ -51,7 +51,7 @@ namespace Catalog.Controllers
             return CreatedAtAction(nameof(GetItem), new {Id = item.Id}, item.AsDto());
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public ActionResult UpdateItem(Guid id, UpdateItemDto itemDto)
         {
             var existingItem = _repository.GetItem(id);
